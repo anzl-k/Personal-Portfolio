@@ -1,0 +1,59 @@
+<!-- Footer Section -->
+<footer class="footer mt-auto py-4" style="background-color: #2E2E2E;">
+    <div class="container">
+
+        <!-- Social Media Icons/Links and Copyright Information -->
+        <div class="row mb-3 justify-content-between align-items-center">
+
+            <!-- Copyright Information -->
+            <div class="col-md-4">
+                <span class="text-secondary">© 2023 by Anjal Katwal. All Rights Reserved.</span>
+            </div>
+
+            <!-- Social Media Icons/Links -->
+            <div class="col-md-4 text-center">
+                <a href="https://np.linkedin.com/in/Anjal-Katwal-9065681b5" class="text-secondary mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://github.com/Anjal-Katwal" class="text-secondary mx-2"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://www.instagram.com/Anjal-Katwal/" class="text-secondary mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+
+            <!-- Back to Top Button -->
+            <div class="col-md-4 text-right">
+                <button class="btn btn-link text-secondary" id="backToTop"><i class="fa fa-chevron-up"></i> Back to Top</button>
+            </div>
+        </div>
+
+        <!-- Contact Information, Quick Navigation Links, and Technology/Credits -->
+        <div class="row mb-3 justify-content-between">
+            <div class="col-md-4">
+                <span class="text-secondary">Email: <a class="text-secondary" href="mailto:akatwal@my.centennialcollege.ca.com">akatwal@my.centennialcollege.ca.com</a></span><br>
+                <a href="/contact" class="text-secondary">Contact Page</a>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <span class="text-secondary">Portfolio built using ExpressJS & EJS. Design elements from Bootstrap.</span>
+            </div>
+
+            <div class="col-md-4 text-right">
+                <a href="/terms-of-service" class="text-secondary mx-2">Terms</a> |
+                <a href="/privacy-policy" class="text-secondary mx-2">Privacy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript; Bootstrap JS, Popper.js, and jQuery for interactivity -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Back to Top Functionality -->
+<script>
+    $(document).ready(function(){
+        $("#backToTop").on('click', function(event) {
+            event.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+    });
+</script>

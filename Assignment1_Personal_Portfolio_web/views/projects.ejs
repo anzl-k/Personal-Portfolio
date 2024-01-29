@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<!-- Title and Subtitle -->
+<section class="text-center py-5 bg-light">
+    <h1 class="display-4">My Projects</h1>
+    <p class="lead">Showcasing my journey in software development, one project at a time.</p>
+</section>
+
+<!-- Project Cards/Listings -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <!-- Each Project Card -->
+            <% const projects = [
+                {
+                    image: '/images/projectA.jpg',
+                    title: 'Stegano',
+                    description: 'simple stegano to hide and reveal messages from images',
+                    icons: ['fab fa-python'],
+                    link: 'https://github.com/Anjal-Katwal/CLI-stegano'
+                },
+                {
+                    image: '/images/projectB.jpg',
+                    title: 'MasterMind',
+                    description: 'This game is a Python implementation of the classic board game "Mastermind."',
+                    icons: ['fab fa-python'],
+                    link: 'https://github.com/Anjal-Katwal/mastermind'
+                },
+                {
+                    image: '/images/weather-icon.png',
+                    title: 'WeatherApp',
+                    description: 'Real-time weather application using OpenWeatherMap API',
+                    icons: ['fab fa-js', 'fab fa-node'],
+                    link: 'https://github.com/Anjal-Katwal/WeatherApp-not-started-yet'
+                },
+                
+            ] %>
+            <% projects.forEach(project => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="<%= project.image %>" alt="<%= project.title %> Thumbnail" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= project.title %></h5>
+                        <p class="card-text"><%= project.description %></p>
+                        <ul class="tech-icons list-inline">
+                            <% project.icons.forEach(icon => { %>
+                            <li class="list-inline-item mx-2"><i class="<%= icon %>"></i></li>
+                            <% }) %>
+                        </ul>
+                        <a href="<%= project.link %>" target="_blank" class="btn btn-outline-dark btn-sm mt-2">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="text-center py-5">
+    <p class="lead">Interested in collaborating on a project? Let's chat!</p>
+    <a href="/contact" class="btn btn-primary btn-lg">Contact Me</a>
+</section>
+
+<%- include('partials/footer') %>

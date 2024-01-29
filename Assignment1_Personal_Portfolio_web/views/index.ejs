@@ -1,0 +1,70 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<!-- Hero Image -->
+<section>
+    <div class="hero-image">
+        <img src="images/hero-background.jpg" alt="Hero Background">
+    </div>
+</section>
+
+<!-- Profile Section -->
+<section class="text-center py-5">
+    <div class="profile">
+        <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width:150px;">
+        <h1>Anjal Katwal</h1>
+        <p>Software Engineering Student</p>
+        <a href="/contact" class="btn btn-primary btn-custom">Contact Me</a>
+        <a href="/projects" class="btn btn-secondary btn-custom">View Projects</a>
+    </div>
+</section>
+
+<!-- Skills Overview -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center">Skills Overview</h2>
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <i class="fab fa-python skill-icon"></i>
+                <p>Python</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-js-square skill-icon"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-java skill-icon"></i>
+                <p>Java</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Featured Projects</h2>
+        <div class="row">
+            <div class="col-md-4 project-thumbnail">
+                <a href="https://github.com/Anjal-Katwal/CLI-stegano" target="_blank">
+                    <img src="/images/projectA.jpg" alt="Stegano Project" class="img-fluid">
+                    <h3 class="text-center">Stegano</h3>
+                </a>
+            </div>
+            <div class="col-md-4 project-thumbnail">
+                <a href="https://github.com/Anjal-Katwal/mastermind" target="_blank">
+                    <img src="/images/projectB.jpg" alt="MasterMind Project" class="img-fluid">
+                    <h3 class="text-center">MasterMind</h3>
+                </a>
+            </div>
+            <div class="col-md-4 project-thumbnail">
+                <a href="https://github.com/Anjal-Katwal/WeatherApp-not-started-yet" target="_blank">
+                    <img src="/images/weather-icon.png" alt="WeatherApp Project" class="img-fluid">
+                    <h3 class="text-center">WeatherApp</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

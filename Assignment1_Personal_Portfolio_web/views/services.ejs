@@ -1,0 +1,67 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<!-- Hero Section -->
+<section class="text-center py-5 bg-light">
+    <h1 class="display-4">Services I Offer</h1>
+    <p class="lead">Tailored software solutions to elevate your business.</p>
+</section>
+
+<!-- Service Listings Section -->
+<section class="py-5">
+    <div class="container">
+        <% const services = [
+            {
+                image: '/images/web-icon.jpg',
+                title: 'Web Development',
+                description: 'Crafting responsive and scalable web applications tailored to your business needs. Specializing in frontend and backend development.',
+                features: ['Responsive Design', 'Optimized for Performance', 'Maintainable Codebase']
+            },
+            {
+                image: '/images/mobile-app-icon.jpg',
+                title: 'Mobile App Development',
+                description: 'Designing and building mobile applications for both Android and iOS platforms. Focused on creating intuitive and user-friendly interfaces.',
+                features: ['Cross-Platform Compatibility', 'Seamless User Experience', 'Regular Updates & Maintenance']
+            },
+            {
+                image: '/images/database-icon.jpg',
+                title: 'Database Management',
+                description: 'Ensuring your data is stored securely and efficiently. Specializing in both relational and non-relational databases.',
+                features: ['Database Design', 'Optimization & Scaling', 'Security & Backup']
+            }
+        ] %>
+        <div class="row">
+            <% services.forEach(service => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="<%= service.image %>" alt="<%= service.title %> Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><%= service.title %></h5>
+                        <p class="card-text"><%= service.description %></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <% service.features.forEach(feature => { %>
+                        <li class="list-group-item"><%= feature %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Link -->
+<div class="text-center py-5 bg-light">
+    <h3>View My Past Work</h3>
+    <a href="/projects" class="btn btn-primary btn-lg mt-3">View My Projects</a>
+</div>
+
+<!-- Call to Action -->
+<section class="text-center py-5" style="background-color: #2E2E2E;">
+    <h2 class="text-white">Ready to start your project?</h2>
+    <p class="lead text-white">Contact me today!</p>
+    <a href="/contact" class="btn btn-light btn-lg mt-3">Get in Touch</a>
+</section>
+
+<%- include('partials/footer') %>
